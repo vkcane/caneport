@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vince Kerby Cane — Portfolio</title>
+    
+    <!-- Google Fonts & FontAwesome Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- External CSS stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header Navbar -->
+    <header>
+        <div class="nav-container">
+            <a href="#" class="logo">Vince<span>.</span></a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-content">
+            <div class="hero-badge">Welcome to my Portfolio</div>
+            <h1>Hi, I'm <span>Vince Kerby Cane</span></h1>
+            <h2><span id="typed-text"></span><span class="typed-cursor">|</span></h2>
+            <p>A developer focused on building clean, responsive interfaces and delivering modern web experiences.</p>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn btn-primary"><i class="fas fa-folder-open"></i> View Projects</a>
+                <a href="#contact" class="btn btn-outline"><i class="fas fa-envelope"></i> Get In Touch</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <div class="profile-circle-container">
+                <img src="profile.jpg" alt="Vince Kerby Cane Profile Photo" class="profile-img-circle">
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2 class="section-title">About <span>Me</span></h2>
+        <div class="about-card">
+            <p>I am a developer focused on creating clean, intuitive, and responsive web interfaces. This portfolio showcases my projects, core skills, and technical progress as I continue to design and build digital solutions.</p>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <h2 class="section-title">Skills & <span>Expertise</span></h2>
+
+        <!-- Skills Filter Tabs -->
+        <div class="skills-filter">
+            <button class="filter-btn active">All Skills</button>
+        </div>
+
+        <div class="skills-grid">
+            <div class="skill-card">
+                <div class="skill-icon"><i class="fas fa-desktop"></i></div>
+                <h3>HIMUI Design</h3>
+                <p>Designing user interfaces and smooth digital experiences.</p>
+            </div>
+            <div class="skill-card">
+                <div class="skill-icon"><i class="fab fa-html5"></i></div>
+                <h3>HTML</h3>
+                <p>Structuring semantic and responsive web content.</p>
+            </div>
+            <div class="skill-card">
+                <div class="skill-icon"><i class="fab fa-css3-alt"></i></div>
+                <h3>CSS</h3>
+                <p>Crafting custom animations and clean layouts.</p>
+            </div>
+            <div class="skill-card">
+                <div class="skill-icon"><i class="fab fa-js"></i></div>
+                <h3>JavaScript</h3>
+                <p>Building interactive components and functional UI logic.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2 class="section-title">Featured <span>Projects</span></h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <span class="project-tag">Web Application</span>
+                <h3>HIMUI Interface Project</h3>
+                <p>A specialized interface layout built with clean structure, responsive styling, and intuitive UI components designed for smooth user interaction.</p>
+                <div style="display: flex; gap: 0.5rem; color: var(--accent); font-size: 0.9rem; font-weight: 600;">
+                    <i class="fas fa-layer-group" style="margin-top: 3px;"></i> UI Component Library
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education">
+        <h2 class="section-title">My <span>Education</span></h2>
+        <div class="education-card">
+            <div class="edu-icon">
+                <i class="fas fa-graduation-cap"></i>
+            </div>
+            <div class="edu-details">
+                <h3>University of the Immaculate Conception</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Message Me Section -->
+    <section id="contact">
+        <h2 class="section-title">Get In <span>Touch</span></h2>
+        <div class="contact-grid">
+            
+            <!-- Contact Info -->
+            <div class="contact-info">
+                <h3>Contact Details</h3>
+                <p>Feel free to reach out directly through email or phone!</p>
+
+                <div class="contact-card" onclick="copyToClipboard('Vinceycane@gmail.com')">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <span>Email</span>
+                        <p>Vinceycane@gmail.com</p>
+                    </div>
+                </div>
+
+                <div class="contact-card" onclick="copyToClipboard('09537962346')">
+                    <i class="fas fa-phone-alt"></i>
+                    <div>
+                        <span>Phone</span>
+                        <p>09537962346</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Message Me Form -->
+            <div class="message-form-container">
+                <h3>Message <span>Me</span></h3>
+                <form id="contact-form" onsubmit="handleFormSubmit(event)">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" required placeholder="Enter your full name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Your Email</label>
+                        <input type="email" id="email" required placeholder="Enter your email address">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" rows="4" required placeholder="Write your message here..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;">
+                        <i class="fas fa-paper-plane"></i> Send Message
+                    </button>
+                </form>
+            </div>
+
+        </div>
+    </section>
+
+    <div id="toast" class="toast">Copied to clipboard!</div>
+
+    <footer>
+        <p>&copy; 2026 Vince Kerby Cane. All rights reserved.</p>
+    </footer>
+
+    <!-- External JavaScript script -->
+    <script src="script.js"></script>
+</body>
+</html>
